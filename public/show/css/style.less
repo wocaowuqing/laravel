@@ -1,0 +1,109 @@
+@charset "utf-8";  
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+}
+*:focus {outline: none;}
+.css{
+  -webkit-user-select:none;/*禁止ios和android用户选中文字*/
+  -webkit-touch-callout: none;/*禁止ios 长按时不触发系统的菜单，禁止ios&android长按时下载图片*/
+}
+a{
+  text-decoration:none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+input,textarea{ 
+  -webkit-appearance: none; /*去除系统默认的样式*/
+  -webkit-tap-highlight-color:rgba(0,0,0,0);    
+  -webkit-user-modify: read-write-plaintext-only;
+}
+a,button{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+html {
+  height: 100%;
+  font-size: 100%;
+}
+body {
+  width: 100%;
+  font-size: 0.1rem;
+  -webkit-touch-callout: none;
+  font-family: -apple-system-font, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+.pos(r){
+  position:relative;
+}
+.pos(a){
+  position:absolute;
+}
+.pos(f){
+  position:fixed;
+}
+
+/*<----------------------------------header部分------------------------------------>*/
+.header{
+  width:100%;
+  height:2.5rem;
+  background: #000;
+  text-align: center;
+  .pos(r);
+  span{
+    color: #fff;
+    font-size: 1.2rem;
+    line-height:2.5rem;
+  }
+}
+/*<----------------------------------section部分------------------------------------>*/
+.activity_box{
+  width:100%;
+  -webkit-flex:1;
+  /*overflow-y: auto;*/
+  .activity_content{
+    width: 100%;
+    dl{
+      width: 49.8%;
+      padding: 1rem 0;
+      float: left;
+      text-align: center;
+      border-bottom:1px solid #59504e;
+      &:nth-child(2n-1){
+        border-right:1px solid #59504e;
+      }
+      &:nth-child(5){
+        border-bottom:none;
+      }
+      &:nth-child(6){
+        border-bottom:none;
+      }
+      dt{
+        width: 100%;
+        img{
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+      dd{
+        font-size:1rem;
+      }
+    }
+  }
+}
+.index-ad-box{position: relative;left: 0;top: 0;width: 100%;height: 16rem;overflow: hidden;}
+.index-ad-slide{height: 100%;}
+.index-ad-slide a{float: left;width: 20%;height: 100%;}
+.index-ad-0{background: url() no-repeat center / 100% 100%;}
+.index-ad-fixed{position: absolute;left: 45%;bottom:.5rem;height: .6rem;display: -webkit-flex;display: flex;-webkit-justify-content:space-around;}
+.index-ad-fixed a{float: left;width: .5rem;height: .5rem;border-radius: 50%;background: #76716f;margin: 0rem 0.2rem}
+.index-ad-fixed .index-ad-fixed-on{background: #000000;}

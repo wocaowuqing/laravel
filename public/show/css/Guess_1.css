@@ -1,0 +1,267 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+.css {
+  -webkit-user-select: none;
+  /*禁止ios和android用户选中文字*/
+  -webkit-touch-callout: none;
+  /*禁止ios 长按时不触发系统的菜单，禁止ios&android长按时下载图片*/
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+  /*去除系统默认的样式*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  height: 100%;
+  font-size: 100%;
+}
+body {
+  width: 100%;
+  font-size: 0.1rem;
+  -webkit-touch-callout: none;
+  font-family: -apple-system-font, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+}
+/*<----------------------------------header部分------------------------------------>*/
+.header {
+  width: 100%;
+  height: 2.5rem;
+  background: #000000;
+  text-align: center;
+  position: relative;
+}
+.header span {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+.header .a_back {
+  position: absolute;
+  left: 0.6rem;
+  top: 2rem;
+  margin-top: -1.2rem;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+}
+.header .a_back:before {
+  content: "";
+  border: 0.1rem solid transparent;
+  border-left-color: #ffffff;
+  border-bottom-color: #ffffff;
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*<----------------------------------section部分------------------------------------>*/
+.Guess1_section {
+  width: 100%;
+  -webkit-flex: 1;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+.Guess1_section .count_box {
+  width: 100%;
+  height: 12rem;
+  background: url(../images/Guess_bg.png) no-repeat center / 100% 100%;
+  color: #fff;
+}
+.Guess1_section .count_box ul {
+  width: 100%;
+  height: 12rem;
+  padding: 0rem 1rem;
+}
+.Guess1_section .count_box ul li {
+  text-align: center;
+  float: left;
+}
+.Guess1_section .count_box ul li:nth-child(2) {
+  width: 35%;
+}
+.Guess1_section .count_box ul li:nth-child(2) p {
+  margin-top: 2.5rem;
+}
+.Guess1_section .count_box ul li:nth-child(2) p img {
+  width: 7.66rem;
+}
+.Guess1_section .count_box ul li:nth-child(2n-1) {
+  width: 31%;
+  margin-top: 4rem;
+}
+.Guess1_section .count_box ul li:nth-child(2n-1) p {
+  font-size: 1rem;
+}
+.Guess1_section .count_box ul li:nth-child(2n-1) p img {
+  width: 2.8rem;
+}
+.Guess1_section .count_box ul li:nth-child(2n-1) p:nth-child(1) {
+  margin-bottom: 0.5rem;
+}
+.Guess1_section .Progress {
+  width: 100%;
+  border-bottom: 3px solid #dcdddd;
+  padding: 1rem;
+}
+.Guess1_section .Progress .p_list {
+  position: relative;
+}
+.Guess1_section .Progress .p_list h1 {
+  font-size: 1rem;
+}
+.Guess1_section .Progress .p_list h1 span {
+  float: right;
+  font-size: 0.8rem;
+}
+.Guess1_section .Progress .p_list .progress_list {
+  width: 85%;
+  height: 1rem;
+  background: #dcdddd;
+  box-shadow: none;
+  margin: 1rem 0;
+  overflow: visible;
+}
+.Guess1_section .Progress .p_list .progress_list .progress-bar {
+  position: relative;
+  animation: animate-positive 2s;
+}
+.Guess1_section .Progress .p_list i {
+  position: absolute;
+  top: 2rem;
+  right: 0px;
+  display: block;
+  font-size: 1.2rem;
+}
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0%;
+  }
+}
+@keyframes animate-positive {
+  0% {
+    width: 0%;
+  }
+}
+.Guess1_section .comment {
+  width: 100%;
+  padding: 1rem;
+}
+.Guess1_section .comment h1 {
+  font-size: 1rem;
+  border-left: 3px solid #000000;
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+.Guess1_section .comment .comment_list {
+  width: 100%;
+}
+.Guess1_section .comment .comment_list dl {
+  width: 100%;
+  height: auto;
+  clear: both;
+}
+.Guess1_section .comment .comment_list dl dt {
+  width: 15%;
+  float: left;
+  display: inline-block;
+}
+.Guess1_section .comment .comment_list dl dt img {
+  width: 2.55rem;
+}
+.Guess1_section .comment .comment_list dl dd {
+  width: 85%;
+  float: right;
+  display: inline-block;
+  border-bottom: 1px solid #c9c9ca;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+.Guess1_section .comment .comment_list dl dd h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+.Guess1_section .comment .comment_list dl dd h2 span {
+  float: right;
+  color: #898989;
+}
+.Guess1_section .comment .comment_list dl dd p {
+  font-size: 0.8rem;
+}
+.Guess1_footer {
+  width: 100%;
+  height: 5rem;
+  padding: 0.8rem 1rem;
+  position: relative;
+}
+.Guess1_footer textarea {
+  width: 78%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+}
+.Guess1_footer button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 5rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  background: #2373af;
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background: -moz-linear-gradient(top, #ff0000 0%, #f3838c 25%, #fdf0f1 50%, #f06570 80%, #ff0000 100%);
+  background: -webkit-linear-gradient(top, #ff0000 0%, #f3838c 25%, #fdf0f1 50%, #f06570 80%, #ff0000 100%);
+  background: -o-linear-gradient(top, #ff0000 0%, #f3838c 25%, #fdf0f1 50%, #f06570 80%, #ff0000 100%);
+  background: -ms-linear-gradient(top, #ff0000 0%, #f3838c 25%, #fdf0f1 50%, #f06570 80%, #ff0000 100%);
+  background: linear-gradient(to bottom, #ff0000 0%, #f3838c 25%, #fdf0f1 50%, #f06570 80%, #ff0000 100%);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
